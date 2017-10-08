@@ -78,5 +78,6 @@ public class MyActor extends Actor {
     @Override
     public void act(float delta) {
         super.act(delta);
+        System.out.println("hello actor is running");
     }
 }
