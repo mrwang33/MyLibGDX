@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.mygdx.actor.MyActor;
+import com.mygdx.input.MyInputListener;
 
 public class MyGdxGame extends ApplicationAdapter {
 	//画布
@@ -37,6 +38,9 @@ public class MyGdxGame extends ApplicationAdapter {
 		//初始化舞台
 		stage = new Stage();
 		stage.addActor(actor);
+		//注册按键监听器 将舞台交给他
+		Gdx.input.setInputProcessor(stage);
+		stage.addListener(new MyInputListener());
 	}
 
 	@Override
